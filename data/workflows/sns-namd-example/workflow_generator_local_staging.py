@@ -127,7 +127,7 @@ class DiamondWorkflow():
 
 
         # Add the namd executable
-        namd = Transformation("namd", site="cori", pfn=os.path.join(self.wf_dir, "bin", "namd_wrapper.sh"), is_stageable=True)\
+        namd = Transformation("namd", site="local", pfn=os.path.join(self.wf_dir, "bin", "namd_wrapper.sh"), is_stageable=True)\
                     .add_pegasus_profile(
                         cores="32",
                         runtime="1200",
